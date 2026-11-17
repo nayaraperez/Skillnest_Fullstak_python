@@ -19,52 +19,96 @@ frase = "Anita lava la tina"
 #🧩 Tipos de datos compuestos
 #Estas con colecciones compuestas de los datos primitivos vistos anteriormente.
 
+
 #📋 Listas: Tipo de datos mutable (que puede cambiar) y contiene un conjunto de distintos valores. Suele utilizarse para almacenar información relacionada.
 
-lista_vacia = []# [] ---> arreglo o lista (array)
+
+lista_vacia = [] # [] ---> Arrglo o lista (Array)
 gatos = ["Garfield", "Silvestre", "Hello Kitty"]
-print(gatos[2]) #Imprime: Hello kitty
-gatos[1] = "Tom" # Modifica el valor de 1
-gatos.append("Felix") # agrega un nuevo valor al final de la lista 
+print(gatos[2]) #Imprime: Hello Kitty
+gatos[1] = "Tom" #Modificar el valor 1
+gatos.append("Felix") #Añade un nuevo valor al final de la lista
+
+
 print(gatos) #Imprime: ['Garfield', 'Tom', 'Hello Kitty', 'Felix']
-gatos.pop() #Elimina el ultimo valor de la lista 
+gatos.pop() #Elimina el ultimo valor de la lista
 print(gatos) #Imprime: ['Garfield', 'Tom', 'Hello Kitty']
-gatos.pop(1)# Elimina el valor de la posicion 1 
+
+
+gatos.pop(1) #Elimina el valor en la posicion 1 de la lista
 print(gatos) #Imprime: ['Garfield', 'Hello Kitty']
 
-#Matrices:Son listas que contienen otras listas.
-ejemplo_matriz = [
+
+#Matrices o Arreglos multidimensionales: Son listas que  contienen otras listas.
+
+
+Ejemplo_matriz = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
-    ]
-print(ejemplo_matriz [1][2]) #imprime:6
-#imprimir el numero 9
-print(ejemplo_matriz [2][2]) #imprime:9
+]
+
+
+print(Ejemplo_matriz[1][2])#Imprime; 6
+#Imprimir el numero 9
+print(Ejemplo_matriz[2][2])#Imprime; 9
+
+
 #Tarea
-#Crear una matriz de 4 x 4 y mostrar el númeri 16 en la terminal.
-Matrix_4x4 = [
+#Crear una matriz de 4x4 y mostrar el numero 16 en la terminal.
+matriz_4x4 = [
     [1, 2, 3, 4],
     [5, 6, 7, 8],
     [9, 10, 11, 12],
     [13, 14, 15, 16]
 ]
-print(Matrix_4x4[3][3]) #imprime:16
+print(matriz_4x4[3][3])#Imprimir 16
+
 
 #🔒 Tuplas: Tipo de datos inmutable (que no se puede modificar) y contiene un conjunto de distintos valores. Pueden contener distintos tipos de datos.
-# () = parentesis = tuplas 
+#Ejemplo = () --> Parentesis = Tuplas
+
+
 perro = ("Scooby Doo", "Gran Danés", "Scooby Galletas", 7)
 print(perro[0]) #Imprime: Scooby Doo
 #perro[2] = "comida de perro" #ERROR: Las tuplas no pueden ser modificadas (TypeError: 'tuple' object does not support item assignment)
+
+
 #🗂️ Diccionarios: Nos permite almacenar contenido a través de una llave y un valor. Podemos acceder a sus datos a través de su índice único (que en este caso llamaremos llave o clave). Encuentra algunos métodos integrados de los diccionarios aquí.
 
-diccionario_vacio = {}
-persona = {'nombre': 'Carmen', 'edad': 31, 'altura': 1.71, 'usa_lentes': False}
+
+#diccionario_vacio = {}
+#Forma de almacenar datos en un diccionario:{llave: valor}
+#JSON --> es un tipo de dato que se utiliza para almacenar informacion en un formato de texto plano.
+#Es muy utilizado en la web para intercambiar infotmacion entre el liente y el servidor
+
+
+
+
+persona = {
+    'nombre': 'Carmen', 
+    'edad': 31, 
+    'altura': 1.71,
+    'usa_lentes': False
+    }
+
+
 persona['nombre'] = 'Valeria'  # Actualiza si el valor de la llave existente
 persona['hobbies'] = ['jugar videojuegos', 'programación'] 
 
-# Agrega esa clave-valor si no existía previamente
-print(persona)
+
+#Incorporar dos nuevas llaves a persona. Profesion, comida favorita, mascotas, peliculas favoritas.
+
+
+persona['Profesion'] = ['Manicurista', 'marketing'] 
+persona['comida_favorita'] = ['Lasaña', 'Sushi', ''] 
+persona['mascotas'] = ['Gatos', 'Perros','Serpientes'] 
+persona['peliculas_favorita'] = ['Interestelar', 'Scarface', 'El Padrino'] 
+
+
+#Imprimir el diccionario completo
+print(persona) #comprobar que se agregaron las nuevas llaves y valores al diccionario 
+
 
 # Imprime: {'nombre': 'Carmen', 'edad': 31, 'altura': 1.71, 'usa_lentes': False, 'hobbies': ['jugar videojuegos', 'programación']}
 altura = persona.pop('altura')  # Elimina la clave indicada y devuelve el valor
@@ -81,3 +125,6 @@ print(type(persona)) #Imprime <class 'dict'>
 
 print(len(persona)) #Imprime: 4 (la cantidad de pares de clave-valor)
 print(len("Me encanta programar")) #Imprime: 20
+
+
+
