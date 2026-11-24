@@ -139,14 +139,23 @@ print("Lista ordenada:" , sorted(numerosAleatorios))
 # 🧪 Métodos específicos de Listas
 # Ya vimos que con el método .append() agregamos elementos al final de nuestra lista, este es un ejemplo de un método integrado para listas. Los métodos que veremos a continuación son únicamente para listas y no podrán ser utilizados para otros tipos de datos. La sintaxis de estos métodos es colocar primero la lista, seguida de un punto y después el método, como por ejemplo:
 
-# frozen = ["Elsa", "Anna", "Olaf"]
-# frozen.pop() #Sintaxis: nombre_lista.funcion()
-# print(frozen) #Imprime: ['Elsa', 'Anna']
-# Algunos métodos comunes para las listas son:
+frozen = ["Elsa", "Anna", "Olaf"]
+frozen.pop() #Sintaxis: nombre_lista.funcion()
+print(frozen) #Imprime: ['Elsa', 'Anna']
 
+
+
+# Algunos métodos comunes para las listas son:
+lista_series = ["One piece", "Given", "Slam Dunk", "Chavo del 8", "The Big bang Theory", "The Simpsons", "Soy Luna"]
 # list.append(valor): añade un valor al final de la lista.
+lista_series.append("Rápido y Furioso")
 # list.pop(índice): elimina un valor en la posición dada. Si no se pasa ningún parámetro, se eliminará el último valor en la lista.
+lista_series.pop(1)
 # list.index(valor): devuelve el índice (posición) del valor dado si existe en la lista y genera un error si no existe.
+lista_series.index()
 # list.reverse(): invierte el orden de los elementos, en su lugar.*
+lista_series.reverse()
 # list.sort(): ordena los elementos de menor a mayor, o alfabéticamente para cadenas.
+lista_series.sort()
 # Existen muchísimos métodos más, te invitamos a leer la documentación para aprender más sobre ellos aquí.
+
