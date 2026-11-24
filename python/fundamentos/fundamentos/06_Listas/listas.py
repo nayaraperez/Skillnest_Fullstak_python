@@ -76,38 +76,66 @@ print(cancion)
 # 🗂️ Acceder a los valores
 # Regresando a la analogía de la cajonera, cada cajón está numerado comenzando por el 0. Nuestro primer cajón (índice 0) tiene “pantalones”, el segundo cajón (índice 1) tiene “camisas”, y así por cada cajón. Cada cajón está representado por un número, al cual lo conocemos como índice; este sirve como dirección/posición única que apunta a cada ítem dentro del mueble. Para acceder a ellos lo haremos de la siguiente manera:
 
-# cajonera = ["pantalones", "camisetas", "calcetines"]
-# print(cajonera[0]) #Accedemos al cajón con índice 0. Imprime: "pantalones"
-# print(cajonera[1]) #Accedemos al cajón con índice 1. Imprime: "camisetas"
-# print(cajonera[2]) #Accedemos al cajón con índice 2. Imprime: "calcetines"
-# cajonera[1] = "sueters" #Cambiamos el valor del cajón con índice 1
-# print(cajonera) #Imprime: ['pantalones', 'sueters', 'calcetines']
+cajonera = ["pantalones", "camisetas", "calcetines"]
+print(cajonera[0]) #Accedemos al cajón con índice 0. Imprime: "pantalones"
+print(cajonera[1]) #Accedemos al cajón con índice 1. Imprime: "camisetas"
+print(cajonera[2]) #Accedemos al cajón con índice 2. Imprime: "calcetines"
+
+print(cajonera) #Imprime: ['pantalones', 'sueters', 'calcetines']
 # 🧰 Manipular listas
 # Como mencionamos anteriormente, las listas son dinámicas, por lo que a través de la función .append() podemos agregar elementos. Esta función agrega un nuevo elemento al final de la lista dada.
 
-# cajonera.append("vestidos") #Agregamos "vestidos" al final de la lista
-# print(cajonera) #Imprime: ['pantalones', 'sueters', 'calcetines', 'vestidos']
+cajonera.append("vestidos") #Agregamos "vestidos" al final de la lista
+print(cajonera) #Imprime: ['pantalones', 'sueters', 'calcetines', 'vestidos']
+#añadir 4 elementos mas a la cajonera 
+cajonera.append("blusa")
+cajonera.append("sudadera")
+cajonera.append("camisa")
+cajonera.append("short")
+
+print(", ".join(cajonera))
+
 # ✂️ Slicing
 # Algo de gran utilidad en Python es algo llamado Slicing o “Troceado”, que nos permite regresar una copia de parte de nuestra lista en base a índices específicos. La síntaxis utilizada es: [x:y], donde x es el índice inicial y y el índice final.
 
-# lista_grande = [2, 4, 6, 8, 10, 12, 14, 16]
-# print(lista_grande[3:]) #Imprime:[8, 10, 12, 14, 16]
-# print(lista_grande[:6]) #Imprime:[2, 4, 6, 8, 10, 12]
-# print(lista_grande[3:6]) #Imprime:[8, 10, 12]
+
+lista_grande = [2, 4, 6, 8, 10, 12, 14, 16]
+print(lista_grande[3:]) #Imprime:[8, 10, 12, 14, 16]
+print(lista_grande[:6]) #Imprime:[2, 4, 6, 8, 10, 12]
+print(lista_grande[3:6]) #Imprime:[8, 10, 12]
+
+#crear una lista de numeros del 3 al 30  utiliza slicing para imprimir  los siguiente rangos  
+# entre 9 y 15
+# superior a 18
+# inferior a 18
+# entre 15 y 27
+
+tablaDelTres = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30]
+print(tablaDelTres[2:5]) 
+print(tablaDelTres[6:]) 
+print(tablaDelTres[:6]) 
+print(tablaDelTres[4:9]) 
 # 🛠️ Funciones integradas
 # Existen múltiples funciones integradas que pueden utilizarse para secuencias todas las secuencias, incluídas tuplas y cadenas. Pero, ¿a qué nos referimos con secuencia? Piensa en una secuencia como cualquier cosa sobre la que podamos recorrer. A continuación te presentamos una función que utilizarás constantemente:
 
-# len(secuencia): Regresa la cantidad de elementos en la secuencia.
-# vocales = ['a', 'e', 'i', 'o', 'u']
-# print(len(vocales)) #Imprime: 5
+#len(secuencia): Regresa la cantidad de elementos en la secuencia.
+vocales = ['a', 'e', 'i', 'o', 'u']
+print(len(vocales)) #Imprime: 5
  
+#Ejemplo 
+numerosAleatorios = [2, 20, 5, 33, 1, 67]
 
 # 📏 Ejemplos de funciones para secuencias
 # len(secuencia): devuelve la longitud (cantidad de elementos) de una secuencia.
+print("Largo de la variable es:", len(numerosAleatorios))
 # max(secuencia): devuelve el valor más alto en una secuencia.
+print("Número mas alto:", max(numerosAleatorios))
 # min(secuencia): devuelve el valor más bajo en una secuencia.
+print("Número mas bajo:", min( numerosAleatorios))
 # sorted(secuencia): devuelve una secuencia ordenada.
 # Encuentra más funciones integradas que te pueden ser de utilidad aquí.
+
+print("Lista ordenada:" , sorted(numerosAleatorios))
 # 🧪 Métodos específicos de Listas
 # Ya vimos que con el método .append() agregamos elementos al final de nuestra lista, este es un ejemplo de un método integrado para listas. Los métodos que veremos a continuación son únicamente para listas y no podrán ser utilizados para otros tipos de datos. La sintaxis de estos métodos es colocar primero la lista, seguida de un punto y después el método, como por ejemplo:
 
